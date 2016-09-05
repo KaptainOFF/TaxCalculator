@@ -8,7 +8,7 @@ public class Input {
 	private byte mFinancialPeriod;
 	
 	
-	public float getUserAmount() {
+	public double getUserAmount() {
 		
 		do {
 			try {
