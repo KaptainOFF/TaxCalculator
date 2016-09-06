@@ -22,10 +22,9 @@ public class Calculator {
 			BigDecimal secondTier = new BigDecimal("41865");
 			BigDecimal thirdTier = new BigDecimal("150000");
 			BigDecimal finalTier = new BigDecimal("200000");
-			BigDecimal percentageTierOne = new BigDecimal("20");
-			BigDecimal percentageTierTwo = new BigDecimal("40");
-			BigDecimal percentageTierThree = new BigDecimal("45");
-			BigDecimal divisor = new BigDecimal("100");
+			BigDecimal percentageTierOne = new BigDecimal("0.20");
+			BigDecimal percentageTierTwo = new BigDecimal("0.40");
+			BigDecimal percentageTierThree = new BigDecimal("0.45");
 			
 			if (mAnnualGrossAmount.compareTo(firstTier) == -1) {
 				finalAmount = mAnnualGrossAmount;
@@ -34,40 +33,32 @@ public class Calculator {
 						mAnnualGrossAmount.compareTo(secondTier) == -1) ) {
 				
 				BigDecimal taxableAmount = mAnnualGrossAmount.subtract(firstTier);
-				BigDecimal tax =  taxableAmount.multiply(percentageTierOne).divide(divisor,2,BigDecimal.ROUND_HALF_UP);
+				BigDecimal tax =  taxableAmount.multiply(percentageTierOne);
 				finalAmount = mAnnualGrossAmount.subtract(tax);
 				System.out.println("Your tax is: " + tax);
 			} else if ( mAnnualGrossAmount.compareTo(secondTier) == 1 &&
 						(mAnnualGrossAmount.compareTo(thirdTier) == 0 ||
 						mAnnualGrossAmount.compareTo(thirdTier) == -1) ) {
 	
-				BigDecimal firstTaxableAmount = new BigDecimal("31856");
+				BigDecimal firstTaxableAmount = new BigDecimal("31865");
 				BigDecimal secondTaxableAmount = mAnnualGrossAmount.subtract(secondTier);
 				
 				BigDecimal tax = ((firstTaxableAmount.multiply(
-									percentageTierOne).divide(
-									divisor,2,BigDecimal.ROUND_HALF_UP)).add(
+									percentageTierOne)).add(
 									secondTaxableAmount.multiply(
-									percentageTierTwo).divide(
-									divisor,2,BigDecimal.ROUND_HALF_UP)));
+									percentageTierTwo)));
 				
 				finalAmount = mAnnualGrossAmount.subtract(tax);
 				System.out.println("Your tax is: " + tax);
 			} else if ( mAnnualGrossAmount.compareTo(thirdTier) == 1 ) {
 				
-				BigDecimal firstTaxableAmount = new BigDecimal("31856");
+				BigDecimal firstTaxableAmount = new BigDecimal("31865");
 				BigDecimal secondTaxableAmount = thirdTier.subtract(secondTier);
 				BigDecimal thirdTaxableAmount = finalTier.subtract(mAnnualGrossAmount);
 				
 				BigDecimal tax = ((firstTaxableAmount.multiply(percentageTierOne
-									).divide(divisor,2,BigDecimal.ROUND_HALF_UP)
-									).add(secondTaxableAmount.multiply(
-										  percentageTierTwo).divide(
-										  divisor,2,BigDecimal.ROUND_HALF_UP)
-									).add(
-									      thirdTaxableAmount.multiply(
-									      percentageTierThree.divide(
-									      divisor))));
+									).add(secondTaxableAmount.multiply(percentageTierTwo)
+									).add(thirdTaxableAmount.multiply(percentageTierThree))));
 				
 				finalAmount = mAnnualGrossAmount.subtract(tax);
 			}
@@ -77,10 +68,9 @@ public class Calculator {
 			BigDecimal secondTier = new BigDecimal("42385");
 			BigDecimal thirdTier = new BigDecimal("150000");
 			BigDecimal finalTier = new BigDecimal("200000");
-			BigDecimal percentageTierOne = new BigDecimal("20");
-			BigDecimal percentageTierTwo = new BigDecimal("40");
-			BigDecimal percentageTierThree = new BigDecimal("45");
-			BigDecimal divisor = new BigDecimal("100");
+			BigDecimal percentageTierOne = new BigDecimal("0.20");
+			BigDecimal percentageTierTwo = new BigDecimal("0.40");
+			BigDecimal percentageTierThree = new BigDecimal("0.45");
 			
 			if (mAnnualGrossAmount.compareTo(firstTier) == -1) {
 				finalAmount = mAnnualGrossAmount;
@@ -89,7 +79,7 @@ public class Calculator {
 						mAnnualGrossAmount.compareTo(secondTier) == -1) ) {
 				
 				BigDecimal taxableAmount = mAnnualGrossAmount.subtract(firstTier);
-				BigDecimal tax =  taxableAmount.multiply(percentageTierOne).divide(divisor,2,BigDecimal.ROUND_HALF_UP);
+				BigDecimal tax =  taxableAmount.multiply(percentageTierOne);
 				finalAmount = mAnnualGrossAmount.subtract(tax);
 				System.out.println("Your tax is: " + tax);
 			} else if ( mAnnualGrossAmount.compareTo(secondTier) == 1 &&
@@ -99,12 +89,10 @@ public class Calculator {
 				BigDecimal firstTaxableAmount = new BigDecimal("31785");
 				BigDecimal secondTaxableAmount = mAnnualGrossAmount.subtract(secondTier);
 				
-				BigDecimal tax = ((firstTaxableAmount.multiply(
-									percentageTierOne).divide(
-									divisor,2,BigDecimal.ROUND_HALF_UP)).add(
+				BigDecimal tax = (firstTaxableAmount.multiply(
+									percentageTierOne)).add(
 									secondTaxableAmount.multiply(
-									percentageTierTwo).divide(
-									divisor,2,BigDecimal.ROUND_HALF_UP)));
+									percentageTierTwo));
 				
 				finalAmount = mAnnualGrossAmount.subtract(tax);
 				System.out.println("Your tax is: " + tax);
@@ -115,14 +103,12 @@ public class Calculator {
 				BigDecimal thirdTaxableAmount = finalTier.subtract(mAnnualGrossAmount);
 				
 				BigDecimal tax = ((firstTaxableAmount.multiply(percentageTierOne
-									).divide(divisor,2,BigDecimal.ROUND_HALF_UP)
+									)
 									).add(secondTaxableAmount.multiply(
-										  percentageTierTwo).divide(
-										  divisor,2,BigDecimal.ROUND_HALF_UP)
+										  percentageTierTwo)
 									).add(
 									      thirdTaxableAmount.multiply(
-									      percentageTierThree.divide(
-									      divisor))));
+									      percentageTierThree)));
 				
 				finalAmount = mAnnualGrossAmount.subtract(tax);
 				System.out.println("Your tax is: " + tax);
