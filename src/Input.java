@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Input {
 	Scanner scr = new Scanner(System.in);
 	private float mAmount;
-	private byte mAge;
+	//private byte mAge;
 	private byte mFinancialPeriod;
 	
 	

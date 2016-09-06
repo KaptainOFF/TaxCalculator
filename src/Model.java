@@ -1,11 +1,11 @@
 import java.util.Map;
-import java.util.HashMap;
+import java.util.TreeMap;
 
 
 public class Model {
-	Map<String, Double> taxValues = new HashMap<>();
+	Map<String, Double> taxValues = new TreeMap<>();
 	
-	private double mGrossAnnual;
+	private double grossAnnual;
 	private double mGrossMonthly;
 	private double mGrossWeekly;
 	private double mNetAnnual;
@@ -13,10 +13,10 @@ public class Model {
 	private double mNetWeekly;
 	
 	public double getmGrossAnnual() {
-		return mGrossAnnual;
+		return grossAnnual;
 	}
 	public void setmGrossAnnual(double mGrossAnnual) {
-		this.mGrossAnnual = mGrossAnnual;
+		this.grossAnnual = mGrossAnnual;
 	}
 	public double getmGrossMonthly() {
 		return mGrossMonthly;
