@@ -1,51 +1,52 @@
 import java.util.Map;
 import java.util.TreeMap;
+import java.math.BigDecimal;
 
 
 public class Model {
-	Map<String, Double> taxValues = new TreeMap<>();
+	Map<String, BigDecimal> taxValues = new TreeMap<>();
 	
-	private double grossAnnual;
-	private double mGrossMonthly;
-	private double mGrossWeekly;
-	private double mNetAnnual;
-	private double mNetMonthly;
-	private double mNetWeekly;
+	private BigDecimal grossAnnual;
+	private BigDecimal mGrossMonthly;
+	private BigDecimal mGrossWeekly;
+	private BigDecimal mNetAnnual;
+	private BigDecimal mNetMonthly;
+	private BigDecimal mNetWeekly;
 	
-	public double getmGrossAnnual() {
+	public BigDecimal getmGrossAnnual() {
 		return grossAnnual;
 	}
-	public void setmGrossAnnual(double mGrossAnnual) {
+	public void setmGrossAnnual(BigDecimal mGrossAnnual) {
 		this.grossAnnual = mGrossAnnual;
 	}
-	public double getmGrossMonthly() {
+	public BigDecimal getmGrossMonthly() {
 		return mGrossMonthly;
 	}
-	public void setmGrossMonthly(double mGrossMonthly) {
+	public void setmGrossMonthly(BigDecimal mGrossMonthly) {
 		this.mGrossMonthly = mGrossMonthly;
 	}
-	public double getmGrossWeekly() {
+	public BigDecimal getmGrossWeekly() {
 		return mGrossWeekly;
 	}
-	public void setmGrossWeekly(double mGrossWeekly) {
+	public void setmGrossWeekly(BigDecimal mGrossWeekly) {
 		this.mGrossWeekly = mGrossWeekly;
 	}
-	public double getmNetAnnual() {
+	public BigDecimal getmNetAnnual() {
 		return mNetAnnual;
 	}
-	public void setmNetAnnual(double mNetAnnual) {
+	public void setmNetAnnual(BigDecimal mNetAnnual) {
 		this.mNetAnnual = mNetAnnual;
 	}
-	public double getmNetMonthly() {
+	public BigDecimal getmNetMonthly() {
 		return mNetMonthly;
 	}
-	public void setmNetMonthly(double mNetMonthly) {
+	public void setmNetMonthly(BigDecimal mNetMonthly) {
 		this.mNetMonthly = mNetMonthly;
 	}
-	public double getmNetWeekly() {
+	public BigDecimal getmNetWeekly() {
 		return mNetWeekly;
 	}
-	public void setmNetWeekly(double mNetWeekly) {
+	public void setmNetWeekly(BigDecimal mNetWeekly) {
 		this.mNetWeekly = mNetWeekly;
 	}
 

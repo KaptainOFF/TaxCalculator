@@ -1,25 +1,27 @@
 import java.util.InputMismatchException;
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Input {
 	Scanner scr = new Scanner(System.in);
-	private float mAmount;
+	private BigDecimal mAmount;
 	//private byte mAge;
 	private byte mFinancialPeriod;
 	
 	
-	public double getUserAmount() {
-		
+	public BigDecimal getUserAmount() {
+		BigDecimal lowerLimit = new BigDecimal("0");
+		BigDecimal upperLimit = new BigDecimal("200000");
 		do {
 			try {
 				System.out.print("Please provide gross amount of your salary: ");
-				mAmount = scr.nextFloat();
+				mAmount = scr.nextBigDecimal();
 			} catch (InputMismatchException ime) {
 				System.out.println("Input needs to be a number!");
 				scr.next();
 			} 
 			
-		} while (mAmount < 0 && mAmount >= 200000);
+		} while (mAmount.compareTo(lowerLimit) == -1 && mAmount.compareTo(upperLimit) == 1);
 	return mAmount;
 	}
 /*	
